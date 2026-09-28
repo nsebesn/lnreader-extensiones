@@ -17,6 +17,7 @@ Catálogo para añadir en la app:
 | Extensión | Versión | Qué corrige |
 |---|---|---|
 | SkyNovels | 1.1.1 | Filtros de orden, estado y origen que la API admite |
+| MVLempyr | 1.0.15 | La lista va de 20 en 20 y la búsqueda por tandas pequeñas, en vez de bajar el catálogo entero (~22 MB) cada vez |
 
 ## Cómo se prueba
 
