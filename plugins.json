@@ -43,5 +43,14 @@
     "version": "1.0.3",
     "url": "https://raw.githubusercontent.com/nsebesn/lnreader-extensiones/main/dilartube.js",
     "iconUrl": "https://raw.githubusercontent.com/lnreader/lnreader-plugins/plugins/v3.0.0/public/static/src/ar/dilartube/icon.png"
+  },
+  {
+    "id": "tunovelaligera",
+    "name": "TuNovelaLigera",
+    "site": "https://tunovelaligera.com",
+    "lang": "Español",
+    "version": "1.2.2",
+    "url": "https://raw.githubusercontent.com/nsebesn/lnreader-extensiones/main/tunovelaligera.js",
+    "iconUrl": "https://raw.githubusercontent.com/lnreader/lnreader-plugins/plugins/v3.0.0/public/static/src/es/tunovelaligera/icon.png"
   }
 ]
