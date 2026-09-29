@@ -4,7 +4,7 @@
     "name": "SkyNovels",
     "site": "https://www.skynovels.net/",
     "lang": "Español",
-    "version": "1.1.1",
+    "version": "1.1.2",
     "url": "https://raw.githubusercontent.com/nsebesn/lnreader-extensiones/main/skynovels.js",
     "iconUrl": "https://raw.githubusercontent.com/lnreader/lnreader-plugins/plugins/v3.0.0/public/static/src/es/skynovels/icon.png"
   },
