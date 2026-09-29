@@ -19,6 +19,8 @@ Catálogo para añadir en la app:
 | SkyNovels | 1.1.1 | Filtros de orden, estado y origen que la API admite |
 | MVLempyr | 1.0.15 | La lista va de 20 en 20 y la búsqueda por tandas pequeñas, en vez de bajar el catálogo entero (~22 MB) cada vez |
 | Fenrir Realm | 1.1.3 | Lista y búsqueda con la API nueva de la web; el capítulo, desde la API y convertido del JSON del editor (antes salía como código) |
+| Quanben | 1.1.2 | La portada entera (la oficial tomaba sólo la primera obra de cada bloque: 36 de 125) y las páginas de cada categoría |
+| dilar tube | 1.0.3 | La lista junta las novelas de cuatro páginas del listado de novedades, que mezcla cómics y novelas (la oficial daba a veces una sola), sin repetir obras entre páginas |
 
 ## Cómo se prueba
 

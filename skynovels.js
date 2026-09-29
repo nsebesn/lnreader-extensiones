@@ -72,4 +72,43 @@ var e=this&&this.__awaiter||function(e,n,a,l){return new(a||(a=Promise))((functi
         });
       });
   };
+
+  // Preservar la organización real de volúmenes que entrega la API de SkyNovels
+  plugin.parseNovel = function (novelPath) {
+    var id = novelPath.split('/')[1];
+    var url = api + 'novel/' + id + '/reading?&q';
+    return fetchLib.fetchApi(url, { headers: { 'Cache-Control': 'no-cache' } })
+      .then(function (response) { return response.json(); })
+      .then(function (data) {
+        var novel = (data && data.novel && data.novel[0]) || {};
+        var genres = (novel.genres || []).map(function (g) { return g.genre_name; }).join(',');
+        var chapters = [];
+        var volumes = novel.volumes || [];
+        volumes.forEach(function (vol, volIdx) {
+          var rawVolTitle = (vol.vlm_title || ('Volumen ' + (volIdx + 1))).trim();
+          var volTitle = rawVolTitle;
+          (vol.chapters || []).forEach(function (ch) {
+            var chTitle = ch.chp_index_title || '';
+            var taggedTitle = '[' + volTitle + '] ' + chTitle;
+            var releaseTime = ch.createdAt ? new Date(ch.createdAt).toDateString() : '';
+            var path = novelPath + ch.id + '/' + (ch.chp_name || '');
+            chapters.push({
+              name: taggedTitle,
+              releaseTime: releaseTime,
+              path: path
+            });
+          });
+        });
+        return {
+          path: novelPath,
+          name: novel.nvl_title || 'Untitled',
+          cover: api + 'get-image/' + novel.image + '/novels/false',
+          genres: genres,
+          author: novel.nvl_writer,
+          summary: novel.nvl_content,
+          status: novel.nvl_status,
+          chapters: chapters
+        };
+      });
+  };
 })();
